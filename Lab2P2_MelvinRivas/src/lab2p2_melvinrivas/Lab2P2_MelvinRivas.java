@@ -21,14 +21,14 @@ public class Lab2P2_MelvinRivas {
      */
     public static void main(String[] args) throws ParseException {
         Scanner input = new Scanner(System.in);
-
         ArrayList<Libros> lib = new ArrayList<>(); //arreglo de la clase libros
         ArrayList<Articulo> arti = new ArrayList<>(); //arreglo de la clase articulos
         ArrayList<Cursolinea> curso = new ArrayList<>(); //arreglo de la clase curso en linea
         ArrayList<Confevirtuales> confe = new ArrayList<>(); //arreglo de la clase Conferencia virtuales
         ArrayList<Usuario> user = new ArrayList<>(); // arreglo de la clase usuario
         ArrayList union = new ArrayList(); //Aqui van a ir todo los arreglos juntos 
-
+        
+        
         int op = 0; // op == opciones
         do {//inicio do while
 
@@ -48,11 +48,17 @@ public class Lab2P2_MelvinRivas {
                     union.addAll(arti);
                     union.addAll(curso);
                     union.addAll(confe);
+                    
+                    if(union.isEmpty()){
+                        System.out.println("");
+                        System.out.println("-----No hay nada que listar-----");
+                    }else{
                     System.out.println("------Lista-----");
                     for (int i = 0; i < union.size(); i++) {
 
                         System.out.println(i + ". " + union.get(i));
 
+                    }
                     }
                     break;
                 }
@@ -353,7 +359,8 @@ public class Lab2P2_MelvinRivas {
                                 
                                 curso.get(modificar).setTitulo(titcurso);
                                  curso.get(modificar).setInstructor(instructor);
-                                  curso.get(modificar).setDuresemanas(duresemanas);       
+                                  curso.get(modificar).setDuresemanas(duresemanas); 
+                                   curso.get(modificar).setPlataforma(plataforma);
                                 
                             }
                             break;
@@ -372,6 +379,25 @@ public class Lab2P2_MelvinRivas {
                                 System.out.print("Que desea Modificar: ");
                                 modificar = input.nextInt();
                                 
+                                System.out.print("Ingrese el titulo: ");
+                                String titconfe = input.nextLine();
+                                titconfe = input.nextLine();
+                                System.out.print("Ingrese nombre del conferencista: ");
+                                String conferencista = input.nextLine();
+                                System.out.print("Ingrese la fecha: ");
+                                String fechalib = input.nextLine();
+                                SimpleDateFormat fecha2 = new SimpleDateFormat("dd/MM/yyyy");
+                                Date fecha3 = fecha2.parse(fechalib);
+                                System.out.print("Ingrese la duracion: ");
+                                String fechaconfe = input.nextLine();
+                                System.out.print("Ingrese el enlace: ");
+                                String enlace = input.nextLine();
+                                
+                                confe.get(modificar).setTitulo(titconfe);
+                                confe.get(modificar).setConfe(conferencista);
+                                confe.get(modificar).setFecha(fecha3);
+                                confe.get(modificar).setDuracion(fechaconfe);
+                                confe.get(modificar).setEnlace(enlace);
                             }
                             break;
                         }
