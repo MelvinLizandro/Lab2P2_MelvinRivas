@@ -14,7 +14,8 @@ public class Lab2P2_MelvinRivas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic herS
+        Usuario = new Usuario();
     }
     
 }
