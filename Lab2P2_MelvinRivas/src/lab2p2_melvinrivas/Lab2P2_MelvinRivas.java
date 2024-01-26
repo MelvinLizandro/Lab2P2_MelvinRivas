@@ -48,7 +48,7 @@ public class Lab2P2_MelvinRivas {
                     union.addAll(arti);
                     union.addAll(curso);
                     union.addAll(confe);
-
+                    System.out.println("------Lista-----");
                     for (int i = 0; i < union.size(); i++) {
 
                         System.out.println(i + ". " + union.get(i));
@@ -59,7 +59,8 @@ public class Lab2P2_MelvinRivas {
                 case 2: {// agregar articulo 
 
                     if (true) {
-
+                        System.out.println("");
+                        System.out.println("---Menu de crear---");
                         System.out.println("1. Agregar Libro");
                         System.out.println("2. Agregar Articulo");
                         System.out.println("3. Agregar curso en linea");
@@ -72,6 +73,7 @@ public class Lab2P2_MelvinRivas {
                             case 1: {
                                 System.out.print("Ingrese el titulo: ");
                                 String titlibro = input.nextLine();
+                                titlibro = input.nextLine();
                                 System.out.print("Ingrese el autor: ");
                                 String aulibro = input.nextLine(); //autor del libro
                                 System.out.print("Ingrese genero: ");
@@ -89,25 +91,56 @@ public class Lab2P2_MelvinRivas {
                             case 2: {
                                 System.out.print("Ingrese el titulo: ");
                                 String titarti = input.nextLine();
+                                titarti = input.nextLine();
                                 System.out.print("Ingrese el autor: ");
-                                String auarticulo = input.nextLine(); //autor del libro
+                                String auarti = input.nextLine(); //autor del libro
                                 System.out.print("Ingrese tema: ");
-                                String temalibro = input.nextLine(); //genero del libro
+                                String temaarti = input.nextLine(); //genero del libro
                                 System.out.print("Imgrese fecha de publicacion (dd/MM/yyyy): ");
                                 String fechalib = input.nextLine();
                                 SimpleDateFormat fecha2 = new SimpleDateFormat("dd/MM/yyyy");
                                 Date fecha3 = fecha2.parse(fechalib);
                                 boolean acceso = true;
                                 
+                                Articulo articulo = new Articulo(titarti,auarti,temaarti,fecha3,acceso);
                                 
+                                arti.add(articulo);
                                 break;
                             }
                             case 3: {
-
+                                System.out.print("Ingrese el titulo: ");
+                                String  titcurso = input.nextLine();
+                                titcurso = input.nextLine();
+                                System.out.print("Ingrese el instructor: ");
+                                String instructor = input.nextLine();
+                                System.out.print("Ingrese duracion de semanas: ");
+                                String duresemanas = input.nextLine();
+                                System.out.print("Ingrese la plataforma: ");
+                                String plataforma = input.nextLine();
+                                
+                                Cursolinea cursolinea = new Cursolinea(titcurso,instructor,duresemanas,plataforma);
+                                
+                                 curso.add(cursolinea);
                                 break;
                             }
                             case 4: {
-
+                                System.out.print("Ingrese el titulo: ");
+                                String titconfe = input.nextLine();
+                                titconfe = input.nextLine();
+                                System.out.print("Ingrese nombre del conferencista: ");
+                                String conferencista = input.nextLine();
+                                System.out.print("Ingrese la fecha: ");
+                                String fechalib = input.nextLine();
+                                SimpleDateFormat fecha2 = new SimpleDateFormat("dd/MM/yyyy");
+                                Date fecha3 = fecha2.parse(fechalib);
+                                System.out.print("Ingrese la duracion: ");
+                                String fechaconfe = input.nextLine();
+                                System.out.print("Ingrese el enlace: ");
+                                String enlace = input.nextLine();
+                                
+                                Confevirtuales confevirtuales = new Confevirtuales(titconfe,conferencista,fecha3,fechaconfe,enlace);
+                                
+                                confe.add(confevirtuales);
                                 break;
                             }
                             default: {
@@ -136,7 +169,7 @@ public class Lab2P2_MelvinRivas {
                     break;
                 }
             } // fin del switch
-
+            System.out.println("");
         } while (op != 5); // fin del do while
     }//fin de main
 
