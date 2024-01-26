@@ -164,55 +164,74 @@ public class Lab2P2_MelvinRivas {
                     
                     switch (op3) {
                         case 1: {
-                            int eliminar = 0;
-                            System.out.println("");
-                            System.out.println("Lista: ");
-                            for (int i = 0; i < lib.size(); i++) {
-                                System.out.println(i+". "+lib.get(i).toString());
+                            if (lib.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int eliminar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < lib.size(); i++) {
+                                    System.out.println(i + ". " + lib.get(i).toString());
+                                }
+
+                                System.out.print("Que desea eliminar: ");
+                                eliminar = input.nextInt();
+                                lib.remove(eliminar);
                             }
-       
-                            System.out.print("Que desea eliminar: ");
-                            eliminar = input.nextInt();
-                            lib.remove(eliminar);
                             break;
                         }
                         case 2: {
-                            int eliminar = 0;
-                            System.out.println("");
-                            System.out.println("Lista: ");
-                            for (int i = 0; i < arti.size(); i++) {
-                                System.out.println(i + ". " + arti.get(i).toString());
+                            if (arti.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int eliminar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < arti.size(); i++) {
+                                    System.out.println(i + ". " + arti.get(i).toString());
+                                }
+
+                                System.out.print("Que desea eliminar: ");
+                                eliminar = input.nextInt();
+                                arti.remove(eliminar);
                             }
-                           
-                            System.out.print("Que desea eliminar: ");
-                            eliminar = input.nextInt();
-                            arti.remove(eliminar);
                             break;
                         }
                         case 3: {
-                            int eliminar = 0;
-                            System.out.println("");
-                            System.out.println("Lista: ");
-                            for (int i = 0; i < curso.size(); i++) {
-                                System.out.println(i + ". " + curso.get(i).toString());
-                            }
-                            
+                            if (curso.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int eliminar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < curso.size(); i++) {
+                                    System.out.println(i + ". " + curso.get(i).toString());
+                                }
+
                                 System.out.print("Que desea eliminar: ");
                                 eliminar = input.nextInt();
                                 curso.remove(eliminar);
-                          
+                            }
                             break;
                         }
                         case 4: {
-                            int eliminar = 0;
-                            System.out.println("");
-                            System.out.println("Lista: ");
-                            for (int i = 0; i < confe.size(); i++) {
-                                System.out.println(i + ". " + confe.get(i).toString());
-                            }
+                            if (confe.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int eliminar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < confe.size(); i++) {
+                                    System.out.println(i + ". " + confe.get(i).toString());
+                                }
                                 System.out.print("Que desea eliminar: ");
                                 eliminar = input.nextInt();
                                 confe.remove(eliminar);
+                            }
                             break;
                         }
                         default: {
@@ -224,7 +243,143 @@ public class Lab2P2_MelvinRivas {
                     break;
                 }
                 case 4: {
+                        System.out.println("");
+                    System.out.println("-----Menu de remover-----");
+                    System.out.println("1. Modificar Libro");
+                    System.out.println("2. Modificar Articulo");
+                    System.out.println("3. Modificar Curso en Linea");
+                    System.out.println("4. Modificar Conferencia virtual");
+                    System.out.print("Que quiere Realizar: ");
+                    int  op4 = input.nextInt();// opciones de modificar
+                    
+                    switch (op4) {
+                        case 1: {
+                            if (lib.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int modificar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < lib.size(); i++) {
+                                    System.out.println(i + ". " + lib.get(i).toString());
+                                }
 
+                                System.out.print("Que desea Modificar: ");
+                                modificar = input.nextInt();
+                                
+                                System.out.print("Ingrese el titulo: ");
+                                String titlibro = input.nextLine();
+                                titlibro = input.nextLine();
+                                System.out.print("Ingrese el autor: ");
+                                String aulibro = input.nextLine(); //autor del libro
+                                System.out.print("Ingrese genero: ");
+                                String genlibro = input.nextLine(); //genero del libro
+                                System.out.print("Imgrese fecha de publicacion (dd/MM/yyyy): ");
+                                String fechalib = input.nextLine();
+                                SimpleDateFormat fecha2 = new SimpleDateFormat("dd/MM/yyyy");
+                                Date fecha3 = fecha2.parse(fechalib);
+                                boolean disponibilidad = true;
+                                
+                              lib.get(modificar).setTitulo(titlibro);
+                              lib.get(modificar).setAutor(aulibro);
+                              lib.get(modificar).setGenero(genlibro);
+                              lib.get(modificar).setAñopubli(fecha3);
+                              lib.get(modificar).setDisponibilidad(disponibilidad);
+                                
+                            }
+                            break;
+                        }
+                        case 2: {
+                            if (arti.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int modificar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < arti.size(); i++) {
+                                    System.out.println(i + ". " + arti.get(i).toString());
+                                }
+
+                                System.out.print("Que desea Modificar: ");
+                                modificar = input.nextInt();
+                                
+                                System.out.print("Ingrese el titulo: ");
+                                String titarti = input.nextLine();
+                                titarti = input.nextLine();
+                                System.out.print("Ingrese el autor: ");
+                                String auarti = input.nextLine(); //autor del libro
+                                System.out.print("Ingrese tema: ");
+                                String temaarti = input.nextLine(); //genero del libro
+                                System.out.print("Imgrese fecha de publicacion (dd/MM/yyyy): ");
+                                String fechalib = input.nextLine();
+                                SimpleDateFormat fecha2 = new SimpleDateFormat("dd/MM/yyyy");
+                                Date fecha3 = fecha2.parse(fechalib);
+                                boolean acceso = true;
+                                
+                                arti.get(modificar).setTitulo(titarti);
+                                arti.get(modificar).setAutor(auarti);
+                                arti.get(modificar).setTema(temaarti);
+                                arti.get(modificar).setFechpubli(fecha3);
+                                arti.get(modificar).setAccelinea(acceso);
+                            }
+                            break;
+                        }
+                        case 3: {
+                            if (curso.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int modificar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < curso.size(); i++) {
+                                    System.out.println(i + ". " + curso.get(i).toString());
+                                }
+
+                                System.out.print("Que desea Modificar: ");
+                                modificar = input.nextInt();
+                                
+                                 System.out.print("Ingrese el titulo: ");
+                                String  titcurso = input.nextLine();
+                                titcurso = input.nextLine();
+                                System.out.print("Ingrese el instructor: ");
+                                String instructor = input.nextLine();
+                                System.out.print("Ingrese duracion de semanas: ");
+                                String duresemanas = input.nextLine();
+                                System.out.print("Ingrese la plataforma: ");
+                                String plataforma = input.nextLine();
+                                
+                                curso.get(modificar).setTitulo(titcurso);
+                                 curso.get(modificar).setInstructor(instructor);
+                                  curso.get(modificar).setDuresemanas(duresemanas);       
+                                
+                            }
+                            break;
+                        }
+                        case 4: {
+                            if (confe.isEmpty()) {
+                                System.out.println("");
+                                System.out.println("---No hay nada para eliminar---");
+                            } else {
+                                int modificar = 0;
+                                System.out.println("");
+                                System.out.println("Lista: ");
+                                for (int i = 0; i < confe.size(); i++) {
+                                    System.out.println(i + ". " + confe.get(i).toString());
+                                }
+                                System.out.print("Que desea Modificar: ");
+                                modificar = input.nextInt();
+                                
+                            }
+                            break;
+                        }
+                        default: {
+                            System.out.println("-----Caracter invalido-----");
+                            break;
+                        }
+                    }
                     break;
                 }
                 case 5: {
