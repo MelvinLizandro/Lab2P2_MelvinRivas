@@ -56,7 +56,7 @@ public class Cursolinea {
 
     @Override
     public String toString() {
-        return "Cursolinea: " + "titulo: " + titulo + ", instructor: " + instructor + ", duresemanas: " + duresemanas + ", plataforma: " + plataforma;
+        return "Curso en linea: " + "Titulo: " + titulo + ", Instructor: " + instructor + ", Duracion: " + duresemanas + ", Plataforma: " + plataforma;
     }
 
 }
