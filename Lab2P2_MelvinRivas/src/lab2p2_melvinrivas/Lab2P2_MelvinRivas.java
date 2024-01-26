@@ -153,7 +153,74 @@ public class Lab2P2_MelvinRivas {
                     break;
                 }
                 case 3: {
-
+                    System.out.println("");
+                    System.out.println("-----Menu de remover-----");
+                    System.out.println("1. Remover Libro");
+                    System.out.println("2. Remover Articulo");
+                    System.out.println("3. Remover Curso en Linea");
+                    System.out.println("4. Remover Conferencia virtual");
+                    System.out.print("Que quiere Realizar: ");
+                    int  op3 = input.nextInt();// opciones de remover
+                    
+                    switch (op3) {
+                        case 1: {
+                            int eliminar = 0;
+                            System.out.println("");
+                            System.out.println("Lista: ");
+                            for (int i = 0; i < lib.size(); i++) {
+                                System.out.println(i+". "+lib.get(i).toString());
+                            }
+       
+                            System.out.print("Que desea eliminar: ");
+                            eliminar = input.nextInt();
+                            lib.remove(eliminar);
+                            break;
+                        }
+                        case 2: {
+                            int eliminar = 0;
+                            System.out.println("");
+                            System.out.println("Lista: ");
+                            for (int i = 0; i < arti.size(); i++) {
+                                System.out.println(i + ". " + arti.get(i).toString());
+                            }
+                           
+                            System.out.print("Que desea eliminar: ");
+                            eliminar = input.nextInt();
+                            arti.remove(eliminar);
+                            break;
+                        }
+                        case 3: {
+                            int eliminar = 0;
+                            System.out.println("");
+                            System.out.println("Lista: ");
+                            for (int i = 0; i < curso.size(); i++) {
+                                System.out.println(i + ". " + curso.get(i).toString());
+                            }
+                            
+                                System.out.print("Que desea eliminar: ");
+                                eliminar = input.nextInt();
+                                curso.remove(eliminar);
+                          
+                            break;
+                        }
+                        case 4: {
+                            int eliminar = 0;
+                            System.out.println("");
+                            System.out.println("Lista: ");
+                            for (int i = 0; i < confe.size(); i++) {
+                                System.out.println(i + ". " + confe.get(i).toString());
+                            }
+                                System.out.print("Que desea eliminar: ");
+                                eliminar = input.nextInt();
+                                confe.remove(eliminar);
+                            break;
+                        }
+                        default: {
+                            System.out.println("-----Caracter invalido-----");
+                            break;
+                        }
+                    }
+                    
                     break;
                 }
                 case 4: {
