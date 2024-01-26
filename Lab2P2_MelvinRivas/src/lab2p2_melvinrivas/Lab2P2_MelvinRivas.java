@@ -38,7 +38,7 @@ public class Lab2P2_MelvinRivas {
         int retorno = 0;
 
         while (retorno == 0) {
-            
+
             System.out.println("-----Usuarios-----");
             for (int i = 0; i < user.size(); i++) {
                 System.out.println(i + ". " + user.get(i));
