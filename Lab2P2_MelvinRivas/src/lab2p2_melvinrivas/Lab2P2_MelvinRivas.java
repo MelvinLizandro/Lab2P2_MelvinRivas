@@ -41,10 +41,23 @@ public class Lab2P2_MelvinRivas {
                 case 1: {// Listar recursos
                     
                     union.clear();
+                    union.addAll(lib);
+                    union.addAll(arti);
+                    union.addAll(curso);
+                    union.addAll(confe);
                     
+                    for (int i = 0; i < union.size(); i++) {
+                        
+                        System.out.println(i+". "+union.get(i));
+                        
+                    }
                     break;
                 }
-                case 2: {
+                case 2: {// agregar articulo 
+                    
+                    if (true) {
+                    
+                    }
                     
                     break;
                 }
@@ -68,6 +81,49 @@ public class Lab2P2_MelvinRivas {
             
             
         } while (op != 5); // fin del do while
-    }//fin de todo
+    }//fin de main
     
-}
+    public static void menucrear () {
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("1. Agregar Libro");
+        System.out.println("2. Agregar Articulo");
+        System.out.println("3. Agregar curso en linea");
+        System.out.println("4. Agregar conferencia virtual");
+        System.out.print("Que desea realizar: ");
+        
+        int op2 = input.nextInt(); //op2 opciones de crear 
+        
+        switch (op2) {
+            case 1: {
+                
+                break;
+            }
+            case 2: {
+                
+                break;
+            }
+            case 3: {
+                
+                break;
+            }
+            case 4: {
+                
+                break;
+            }
+            case 5: {
+                System.out.println("***Gracias por su preferencia, hasta luego***");
+                break;
+            }
+            default: {
+                
+                break;
+            }
+        }
+        
+             
+           
+    }
+    
+}//fin de todo
